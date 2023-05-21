@@ -1,0 +1,161 @@
+.sideBar{
+    background-color: black;
+    width: 25%;
+    height: 1200px;
+  }
+  .rightBar{
+    background-color: orchid;
+    width: 75%;
+    
+  }
+  .list{
+    list-style-type: none;
+    color: white;
+  }
+  .boxes{
+    background-color: yellow;
+    border-radius: 25px;
+    width: 25%;
+    box-shadow: 0 0 11px black;
+  }
+  .boxeone{
+    background-color: yellow;
+    border-radius: 25px;
+    width: 25%;
+    position: relative;
+    left: 10px;
+    box-shadow: 0 0 11px black;
+  }
+  .boxetwo{
+    background-color: yellow;
+    width: 25%;
+    border-radius: 25px;
+    position: relative;
+    left: 30px;
+    box-shadow: 0 0 11px black;
+  }
+  .listone{
+    color: black;
+    position: relative;
+    top: 12px;
+    right: 13px;
+  }
+  .boxthree{
+    background-color: skyblue;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    height: 150px;
+    width: 35%;
+    
+  }
+  .boxfour{
+    background-color: skyblue;
+    height: 150px;
+    width: 35%;
+    position: relative;
+    left: 2px;
+  }
+  .boxfive{
+    background-color: skyblue;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 150px;
+    width: 29%;
+    position: relative;
+    left: 5px;
+  }
+  .imageContainer{
+    background-color: white;
+    width: 99%;
+    position: relative;
+    top: 25px;
+    border-radius: 25px;
+  }
+  .sme{
+    padding-right: 500px;
+    color: white; 
+    position: relative; 
+    left: 120px; 
+    top: 70px;
+  }
+  .localPurchase{
+    color: white;
+    position: relative;
+    left: 50px;
+    top: 70px;
+  }
+  .apply{
+    color: black;
+    position: relative; 
+    left: 120px; 
+    top: 70px;
+   }
+   .invoices{
+    color: white; 
+    position: relative; 
+    left: 100px; 
+    top: 70px;
+  }
+  .lorem{
+    color: black; 
+    font-weight: bold; 
+    font-size: 20px;
+  }
+  .imgg{
+    position: relative; 
+    left: 50px;
+  }
+  ul{
+    list-style-type: none;
+  }
+  ul a{
+    text-decoration: none;
+  }
+  @media screen and (max-width: 768px){
+    
+    .dashboardres{
+      position: relative;
+      left: -40px;
+      top: 60px;
+    }
+    .dashboardresone{
+      position: relative;
+      bottom: 150px;
+    }
+    .sme{
+      padding-right: 500px;
+      color: white; 
+      position: relative; 
+      left: 50px; 
+      top: 40px;
+    }
+    .localPurchase{
+      color: white;
+      position: relative;
+      left: 20px;
+      top: 40px;
+    }
+    .apply{
+     color: black;
+     position: relative; 
+     left: 60px; 
+     top: 50px;
+    }
+    .invoices{
+      color: white; 
+      position: relative; 
+      left: 20px; 
+      top: 70px;
+    }
+    .lorem{
+      color: black; 
+      font-weight: bold; 
+      font-size: 20px;
+      position: relative;
+      left: 200px;
+    }
+    .imgg{
+      position: relative; 
+      left: 15px;
+    }
+  }

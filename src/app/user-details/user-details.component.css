@@ -1,0 +1,27 @@
+.sideBar{
+    background-color: black;
+    width: 25%;
+    height: 600px;
+  }
+  .listone{
+    color: black;
+    position: relative;
+    top: 12px;
+    right: 13px;
+  }
+  .rightBar{
+    background-color: orchid;
+    width: 75%;
+    height: 600px;
+  }
+  .newUser{
+    margin: 0px;
+    background: white;
+    height: 540px;
+  }
+  ul{
+    list-style-type: none;
+  }
+  ul a{
+    text-decoration: none;
+  }

@@ -1,0 +1,152 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 mt-3 sideBar">
+        <div style="text-align: center; color: white;">
+          <img><span>Name of Admin</span>
+          <p>Admin id</p>
+        </div>
+        <ul class="listone">
+          <a href="#" routerLink = "/dashboard"><li>Dashboard</li></a>
+          <a href="#" routerLink = "/chart"><li>Chart</li></a>
+          <a href="#"><li>User
+            <ul>
+              <a routerLink = "/signup"><li>Create</li></a>
+              <a routerLink = "/table"><li>Table</li></a>
+            </ul>
+          </li></a>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 mt-3 rightBar">
+        <h3>Create new user</h3>
+        <div class="container newUser">
+            <h5>Personal Details</h5>
+            <hr>
+            <form [formGroup] = "signupForm" (ngSubmit) = "onSubmit($event)">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 mt-3">
+                    <label>First Name*</label>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Please enter your first name"
+                            formControlName="name" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && form.name.errors }" />
+                        <div *ngIf="submitted && form.name.errors" class="invalid-feedback">
+                            <div *ngIf="form.name.errors.required && !form.name.errors.cannotContainSpace ">
+                                please enter your first name</div>
+                            <div *ngIf="form.name.errors.cannotContainSpace">please enter your name</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 mt-3">
+                    <label>Last Name*</label>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Please enter your Last name"
+                            formControlName="Lastname" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && form.name.errors }" />
+                        <div *ngIf="submitted && form.name.errors" class="invalid-feedback">
+                            <div *ngIf="form.name.errors.required && !form.name.errors.cannotContainSpace ">
+                                please enter your last name</div>
+                            <div *ngIf="form.name.errors.cannotContainSpace">please enter your name</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 mt-3">
+                    <label>Gender*</label>
+                    <div class="form-group">
+                        <select class="custom-select" (change)="changeGander($event)" formControlName="genderName"
+                        [ngClass]="{ 'is-invalid': submitted && form.genderName.errors }">
+                            <option value="">Select Gender</option>
+                            <option *ngFor="let gen of gen" [ngValue]="gen">{{gen}}</option>
+                          </select>
+                        <div *ngIf="submitted && form.genderName.errors" class="invalid-feedback">
+                            <div *ngIf="form.genderName.errors.required && !form.genderName.errors.cannotContainSpace ">
+                                please enter your gender</div>
+                            <div *ngIf="form.genderName.errors.cannotContainSpace">please enter your gender</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 mt-3">
+                    <label>Date of Birth*</label>
+                    <div class="form-group">
+                        <input type="date" name="birthday"
+                            formControlName="birthday" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && form.name.errors }" />
+                        <div *ngIf="submitted && form.name.errors" class="invalid-feedback">
+                            <div *ngIf="form.name.errors.required && !form.name.errors.cannotContainSpace ">
+                                please enter your date of birth</div>
+                            <div *ngIf="form.name.errors.cannotContainSpace">please enter your date of birth</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 mt-3">
+                    <label>Email*</label>
+                    <div class="m-form-group">
+                        <input type="email" formControlName="email" name="email" placeholder="Please enter email id"
+                            class="form-control inputfield"
+                            [ngClass]="{ 'is-invalid': submitted && form.email.errors }">
+                        <div *ngIf="submitted && form.email.errors" class="invalid-feedback">
+                            <div *ngIf="form.email.errors.required && !form.email.errors.cannotContainSpace ">please enter email id</div>
+                            <div *ngIf="form.email.errors.email && !form.email.errors.cannotContainSpace ">please enter valid email id</div>
+                            <div *ngIf="form.email.errors.cannotContainSpace">please enter email id</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 mt-3">
+                    <label>Mobile Number*</label>
+                    <div class="m-form-group">
+                        <div class="m-regisration-form__countrymblcode">
+                            <input maxlength="10" type="text" formControlName="mobile"
+                                name="Mobile Number" placeholder="please enter mobile number" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && form.mobile.errors }" />
+                        </div>
+                        <div class="flex">
+                            <div *ngIf="submitted && form.mobile.errors"
+                                class="invalid-feedback">
+                                <div *ngIf="form.mobile.errors.required ">please enter mobile number</div>
+                                <div *ngIf="form.mobile.errors.minlength">please enter mobile number</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h5 style="position: relative; top: 20px;">Create Password</h5>
+            <hr style="position: relative; top: 20px;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 mt-3">
+                    <label>Password*</label>
+                    <div class="form-group">
+                        <input type="text" formControlName="password" class="form-control" name="password"
+                            placeholder="please enter password" [ngClass]="{ 'is-invalid': submitted && form.password.errors }" />
+                        <div *ngIf="submitted && form.password.errors" class="invalid-feedback">
+                            <div class="error-color" *ngIf="form.password.errors.required">please enter password
+                            </div>
+                            <div class="error-color" *ngIf="form.password.errors.minlength">please enter password</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 mt-3">
+                    <label>Re-enter Password*</label>
+                    <div class="form-group">
+                        <input type="text" formControlName="password" class="form-control" name="password"
+                            placeholder="please enter password" [ngClass]="{ 'is-invalid': submitted && form.password.errors }" />
+                        <div *ngIf="submitted && form.password.errors" class="invalid-feedback">
+                            <div class="error-color" *ngIf="form.password.errors.required">please re-enter password
+                            </div>
+                            <div class="error-color" *ngIf="form.password.errors.minlength">please re-enter password</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-danger" name="Submit" style="position: relative; top: 60px;">Create</button>
+            </form>
+        </div>
+      </div>
+</div>
+
+
+
+

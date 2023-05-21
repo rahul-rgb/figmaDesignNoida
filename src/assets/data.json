@@ -1,0 +1,19 @@
+{
+    "data": [
+        {"name": "shoes", "price": 10000, "brand": "puma", "location": "lucknow"},
+        {"name": "t-shirt", "price": 1500, "brand": "mufti", "location": "noida"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"},
+        {"name": "shirt", "price": 2000, "brand": "allen solly", "location": "kanpur"}       
+    ]
+}

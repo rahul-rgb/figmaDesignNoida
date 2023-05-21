@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FigmaDes';
+  headerIn = false
+  over(){
+    this.headerIn = true
+  }
+  out(){
+    this.headerIn = false
+  }
 }
